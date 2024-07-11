@@ -7,6 +7,9 @@
 </head>
 <body>
     Test
+    <?php
+        echo "you have connected " . $_POST['fname']
+    ?>
 </body>
 </html>
 <?php  ?>
@@ -15,7 +18,8 @@
 
 <!-- Not sure what i'm doing here yet? -->
 
-<!-- <?php
+<!-- <
+ ?php
 $host="localhost";
 $user="root";
 $pass="";

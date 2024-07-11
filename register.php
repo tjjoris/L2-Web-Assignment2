@@ -12,7 +12,7 @@
 
 <?php 
 // function post() {
-    echo $_POST['fname'];
+    echo "you have registered " . $_POST['fname'];
 // }
  ?>
 
