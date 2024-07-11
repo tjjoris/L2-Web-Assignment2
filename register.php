@@ -1,6 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    register test
+</body>
+</html>
+
+<?php 
+// function post() {
+    echo $_POST['fname'];
+// }
+ ?>
+
+
 <!-- not sure what i'm doing here yet -->
 
-<!-- <?php
+<!-- 
+ <?php
+ /*
 include 'connect.php';
 
 if (isset($_POST['signup'])){
@@ -43,4 +64,6 @@ if (isset($_POST['signIn'])){
         echo "Not found, incorrect name or password"
     }
 }
-?> -->
+    */
+?> 
+-->

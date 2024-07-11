@@ -15,6 +15,9 @@
         <label name="pword">Password</label>
         <input type="text" name="pword" id="pword">
         </div>
+        <div>
+            <button name="submit" id="submit">submit</button>
+        </div>
     </form>
 </body>
 </html>
