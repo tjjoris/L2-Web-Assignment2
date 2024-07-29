@@ -8,7 +8,7 @@
 <body>
     Test
     <?php
-        echo "you have connected " . $_POST['fname']
+        echo "you are trying to connect as " . $_POST['fname']
     ?>
 </body>
 </html>
