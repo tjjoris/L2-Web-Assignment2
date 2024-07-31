@@ -1,61 +1,56 @@
 <?php
 
+//mysqli connection info to be stored in an external file.
 $host="localhost";
 $user="root";
 $pass="";
 $db="web_assign2";
+
+//create a new mysqli connection
 $conn=new mysqli($host,$user,$pass,$db);
+//if sqli connection error print error message.
 if ($conn->connect_error){
     echo "failed to connect to db".$conn->connect_error;
 }
+//else, you are connected.
 else {
+    //print connected.
     echo "connected";
+    //check if POST exists, post is needed to get inputed variables in form.
     if (isset($_POST)) {
-        echo "<br>post detected";
+        //print post detected.
+        echo "<br>post detected<br>";
+        //uname = user name from POST.
         $uname = $_POST['uname'];
+        //password = password from POST.
         $password = $_POST['pword'];
-        // $sql="SELECT * FROM logins WHERE uname='$uname' and password='$password'";
-        // $result=$conn->query($sql);
-        //add if auth user and auth pw here
-        // if (isset($_SERVER['PHP_AUTH_USER']) && 
-        // isset($_SERVER['PHP_AUTH_PW'])) {
-            // $un_temp = sanitize($conn, $_SERVER['PHP_AUTH_USER']);
-            // $pw_temp = sanitize($conn, $_SERVER['PHP_AUTH_PW']);
-            $un_temp = htmlentities($uname);
-            $pw_temp = htmlentities($password);
-            $un_temp = $uname;
-            $pw_temp = $password;
-            $un_temp =  $conn->real_escape_string($uname);
-            $pw_temp =  $conn->real_escape_string($password);
-            $query = "SELECT * FROM logins WHERE uname='$un_temp'";
-            // $result = $conn->query($query);
-            $result_set = mysqli_query($conn, $query);
+        //un_temp = the sanitized user name
+        $un_temp =  $conn->real_escape_string($uname);
+        //pw_temp = the sanitized password
+        $pw_temp =  $conn->real_escape_string($password);
+        //query to find the login name which matches the login name from POST.
+        $query = "SELECT * FROM logins WHERE uname='$un_temp'";
+        //the result set from the query.
+        $result_set = mysqli_query($conn, $query);
+        if ($result_set->num_rows<=0) {
+            die ("username not found");
+        }
+        else {
+            //get the result from the query.
             $result = mysqli_fetch_assoc($result_set);
+            //get the value of the password attribute form the result.
             $pw = $result['password'];
+            //use password_verify() to verify if the passed password matches the hashed password in the DB.
             if (password_verify(str_replace("'", "", $pw_temp), $pw)) {
-    
-            // if($result->num_rows>0){
+                //print valid login
                 echo "<br>valid logon";
-                echo password_hash($password, PASSWORD_DEFAULT);
-                echo "<br>";
-                echo password_hash("god", PASSWORD_DEFAULT);
-                echo "<br>";
-                echo password_hash("god", PASSWORD_DEFAULT);
             }
+            //couldn't login, print invalid user name/password combo.
             else {
                 echo "error, couldn't login";
                 die ("Invalid username/password combination");
-            }
-        // }
-        // else {
-        //     echo "php auth user and pw not found";
-        // }
-        
+            }  
+        }      
     }
-}
-
-function sanitize($conn, $str) {
-    $str = htmlentities($str);
-    return $conn->quote($str);
 }
 ?>

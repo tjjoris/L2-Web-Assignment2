@@ -7,6 +7,8 @@
 </head>
 <body>
     <!-- the container to register -->
+     <!-- register is sent to register2.php as a POST where uname = user name
+      pword = password, and email = email. -->
     <div id="register-container">
         <form method="post" action="register2.php">
             <div>
@@ -28,6 +30,8 @@
     </div>
 
     <!-- the container to connect -->
+     <!-- connect is sent to connect2.php as POST where uname = user name 
+      pword = password, and email = email. -->
     <div id="connect-container">
         <form method="post" action="connect2.php">
             <div>
