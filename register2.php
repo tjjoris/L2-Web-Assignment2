@@ -10,9 +10,13 @@ if ($conn->connect_error){
 }
 else {
     echo "connected";
-    $uname = $_POST['uname'];
-    $email = $_POST['email'];
-    $pword = $_POST['pword'];
+    $uname_unsanitized = $_POST['uname'];
+    $email_unsanitized = $_POST['email'];
+    $pword_unsanitized = $_POST['pword'];
+    $uname =  $conn->real_escape_string($uname_unsanitized);
+    $email =  $conn->real_escape_string($email_unsanitized);
+    $pword =  $conn->real_escape_string($pword_unsanitized);
+
     if (isset($_POST)) {
         $matching_name="SELECT * FROM logins WHERE uname='$uname'";
         $matching_email="SELECT * FROM logins WHERE email='$email'";
@@ -24,9 +28,12 @@ else {
         if ($result_email->num_rows>0){
             echo "<br>emamil is taken";
         }
+        $hash = password_hash($pword, PASSWORD_DEFAULT);
+        echo "$hash";
         $insert_query="INSERT INTO logins (uname, email, password) 
-        VALUES ('$uname', '$email', '$pword')";
+        VALUES ('$uname', '$email', '$hash')";
         if (($result_name->num_rows<=0) && ($result_email->num_rows<=0)){
+            echo password_hash($pword, PASSWORD_DEFAULT);
             $conn->query($insert_query);
         }
         echo "<br>post detected";

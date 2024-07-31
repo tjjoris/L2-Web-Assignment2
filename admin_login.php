@@ -13,7 +13,7 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
-$query = "SELECT * FROM logins";
+$query = "SELECT * FROM logins WHERE uname = 'ab'";
 $report = $conn->query($query);
 // echo $report->fetch();
 // echo htmlspecialchars($report['uname']);
