@@ -1,10 +1,13 @@
 <?php
 
-//mysqli connection info to be stored in an external file.
-$host="localhost";
-$user="root";
-$pass="";
-$db="web_assign2";
+//these are the login variables, instead of using them here, we get them from login_file.php.
+// $host="localhost";
+// $user="root";
+// $pass="";
+// $db="web_assign2";
+
+//get login variables, these are requred for script to run, and will only be called once.
+require_once "login_file.php";
 
 //create a new mysqli connection
 $conn=new mysqli($host,$user,$pass,$db);
