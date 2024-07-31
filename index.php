@@ -8,10 +8,14 @@
 <body>
     <!-- the container to register -->
     <div id="register-container">
-        <form method="post" action="register.php">
+        <form method="post" action="register2.php">
             <div>
-            <label name="fname">First Name</label>
-            <input type="text" name="fname" id="fname">
+            <label name="uname">User Name</label>
+            <input type="text" name="uname" id="uname">
+            </div>
+            <div>
+            <label name="email">Email</label>
+            <input type="text" name="email" id="email">
             </div>
             <div>
             <label name="pword">Password</label>
@@ -25,10 +29,14 @@
 
     <!-- the container to connect -->
     <div id="connect-container">
-        <form method="post" action="connect.php">
+        <form method="post" action="connect2.php">
             <div>
-            <label name="fname">First Name</label>
-            <input type="text" name="fname" id="fname">
+            <label name="uname">User Name</label>
+            <input type="text" name="uname" id="uname">
+            </div>
+            <div>
+            <label name="email">Email</label>
+            <input type="text" name="email" id="email">
             </div>
             <div>
             <label name="pword">Password</label>
