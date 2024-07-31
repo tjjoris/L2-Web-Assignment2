@@ -13,6 +13,13 @@
 <?php 
 // function post() {
     echo "you have registered " . $_POST['fname'];
+    $fname=$_POST['fname'];
+    $pword=$_POST['pword'];
+    $pword=md5($pword);
+    $query = "using testdb;
+     SELECT * FROM users;"
+    $result = $pdo->query($query);
+    echo $pdo;
 // }
  ?>
 

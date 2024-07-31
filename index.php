@@ -7,11 +7,17 @@
 </head>
 <body>
     <!-- the container to register -->
+     <!-- register is sent to register2.php as a POST where uname = user name
+      pword = password, and email = email. -->
     <div id="register-container">
-        <form method="post" action="register.php">
+        <form method="post" action="register2.php">
             <div>
-            <label name="fname">First Name</label>
-            <input type="text" name="fname" id="fname">
+            <label name="uname">User Name</label>
+            <input type="text" name="uname" id="uname">
+            </div>
+            <div>
+            <label name="email">Email</label>
+            <input type="text" name="email" id="email">
             </div>
             <div>
             <label name="pword">Password</label>
@@ -24,11 +30,17 @@
     </div>
 
     <!-- the container to connect -->
+     <!-- connect is sent to connect2.php as POST where uname = user name 
+      pword = password, and email = email. -->
     <div id="connect-container">
-        <form method="post" action="connect.php">
+        <form method="post" action="connect2.php">
             <div>
-            <label name="fname">First Name</label>
-            <input type="text" name="fname" id="fname">
+            <label name="uname">User Name</label>
+            <input type="text" name="uname" id="uname">
+            </div>
+            <div>
+            <label name="email">Email</label>
+            <input type="text" name="email" id="email">
             </div>
             <div>
             <label name="pword">Password</label>
