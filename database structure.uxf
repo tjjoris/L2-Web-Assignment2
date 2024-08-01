@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>380</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Login
+--
+id(PK)
+User name
+Password
+email</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>40</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Threads
+--
+id(PK)
+title
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>40</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Posts
+--
+id(PK)
+thread_id (FK)
+message
+Login_id (FK)
+TimeDate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>60</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>150</y>
+      <w>150</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;130.0;10.0</additional_attributes>
+  </element>
+</diagram>

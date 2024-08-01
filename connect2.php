@@ -57,3 +57,6 @@ else {
     }
 }
 ?>
+<form action="threads_main.php" method="POST" enctype="text/plain">
+    <button type="submit" >Threads</button>
+</form>
