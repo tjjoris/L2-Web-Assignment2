@@ -13,16 +13,17 @@ PRIMARY KEY (id));
 
 CREATE TABLE IF NOT EXISTS threads
 ( id int(11) NOT NULL AUTO_INCREMENT,
-thread_name varchar(200) NOT NULL)
+thread_name varchar(200) NOT NULL,
 CONSTRAINT threads_pk PRIMARY KEY(id));
 
 CREATE TABLE IF NOT EXISTS posts
 ( id INT(11) NOT NULL AUTO_INCREMENT,
 thread_id int(11) NOT NULL,
 login_id INT(11) NOT NULL,
-post_time DATETIME NOT NULL)
+post_time DATETIME NOT NULL,
+message VARCHAR (3000),
 CONSTRAINT posts_pk PRIMARY KEY (id),
 CONSTRAINT posts_login_id FOREIGN KEY (login_id)
 REFERENCES logins (id),
 CONSTRAINT posts_thread_id FOREIGN KEY (thread_id)
-REFERENCES threads (id);
+REFERENCES threads (id));
