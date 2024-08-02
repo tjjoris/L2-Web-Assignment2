@@ -5,7 +5,7 @@
 require_once "login_file.php";
 
 
-    session_start();
+require_once "start_session.php";
     $thread_id = $_SESSION['thread_id'];
     echo $thread_id;
 

@@ -1,6 +1,6 @@
 <?php
 
-
+require_once "start_session.php";
 //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 

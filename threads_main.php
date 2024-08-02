@@ -8,9 +8,7 @@
 <body>
     
 <?php
-session_start();
-$_SESSION['logged_in'] = TRUE;
-$_SESSION['thread_id'] = 1;
+require_once "start_session.php";
 
     //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
@@ -48,7 +46,7 @@ function test1(){
     <button type="submit" >new Thread</button>
 </form>
 
-<?php 
+
 
 </body>
 </html>

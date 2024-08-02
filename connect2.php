@@ -47,6 +47,8 @@ else {
             if (password_verify(str_replace("'", "", $pw_temp), $pw)) {
                 //print valid login
                 echo "<br>valid logon";
+                session_start();
+                $_SESSION['logged_in'] = TRUE;
             }
             //couldn't login, print invalid user name/password combo.
             else {
