@@ -1,4 +1,5 @@
 
 <?php
-            echo "Hello, wold";
+            $testvar=$_POST['threadtitle'];
+            echo $testvar;
             ?>

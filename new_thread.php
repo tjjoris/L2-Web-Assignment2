@@ -15,16 +15,26 @@ require_once "new_thread_script.php";
 //     }
 
 // }
-echo <<<_END
-<form action="submit-new-thread.php" method="POST" enctype="text/plain">
+// echo <<<_END
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="submit-new-thread.php" method="POST">
                 <fieldset>
                 <legend>New Topic</legend>
                 <div class="thread">
                 <input type="text" name="uname" id="uname">
                     <div class="post" class="first-post">
                         <div class="thread-title-container">
-                            <label for="thread-title" class="title-label">Test Title:</label>
-                            <input type="text" name='threadtitle' id="thread-title" placeholder="enter title here" class="title-text">
+                            <label for="threadtitle" class="title-label">Test Title:</label>
+                            <input type="text" name='threadtitle' id="threadtitle" placeholder="enter title here" class="title-text">
                         </div>
                         <div class="author-container">
                             <span class="author-label">Author</span>
@@ -42,5 +52,7 @@ echo <<<_END
                 </div>
             </fieldset>
         </form>
-_END;
-?>
+        
+</body>
+</html>
+<!-- ?> -->
