@@ -50,16 +50,8 @@ else {
                 //insert thread into table
                 $result_set = mysqli_query($conn, $qry_insert_threads);
 
-                //get thread key
-                // $thread_key_obj = mysqli_query($conn, $qry_thread_key);
-                // //get the result from the query.
-                // $key_result = mysqli_fetch_assoc($thread_key_obj);
-                // //get the value of the key attribute form the result.
-                // $thread_key_value = $key_result['0'];
-
+                //get surrogate key of last inserted row.
                 $last_id = $conn->insert_id;
-
-                echo "<br>$last_id<br>";
                 
                 $qry_insert_posts="INSERT INTO posts (thread_id, login_id, post_time, message) 
                         VALUES ('$last_id', '1', NOW(), '$content_container')";
