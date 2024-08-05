@@ -17,6 +17,7 @@ $conn = new mysqli($host,$user,$pass,$db,$port);
 
 //if sqli connection error print error message.
 if ($conn->connect_error){
+    echo "error here";
     echo "failed to connect to db".$conn->connect_error;
 }
 //else, you are connected.
@@ -28,40 +29,52 @@ else {
     // if (!$_SESSION['logged_in']) {
     //     header("Location:index.php");
     // }
+    // function show_thread($thread_id){
+        //query for posts in thead
+        // $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
+        $qry_all_threads="SELECT * FROM threads";
 
-    function show_thread($thread_id){
-    echo "test";
-    echo "$thread_id";
-    //query for posts in thead
-    $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
+        //run query to get posts
+        $result_set = mysqli_query($conn, $qry_all_threads);
 
-    //run query to get posts
-    $result_set = mysqli_query($conn, $qry_select_thread);
+        //get the result from the query.
+        // $result = mysqli_fetch_assoc($result_set);
+        // echo $result['thread_name'];
+        // echo "stuff";
+        // foreach ($result as $item){
+        //     echo $item;
+        //     // if ($item['thread_name'] != null) {
+        //     //     echo $item['thread_name'];
+        //     // }
+        // }
 
-    //get the result from the query.
-    $result = mysqli_fetch_assoc($result_set);
+        // Fetch and display the data
+        while ($row = mysqli_fetch_assoc($result_set)) {
+            // echo "Thread ID: " . $row['id'] . "<br>";
+            // echo "Thread Title: " . $row['thread_name'] . "<br>";
+            $thread_name = $row['thread_name'];
+            // echo "<hr>";
+        // }
+    
 
-    foreach ($result as $item){
-        echo $item;
-    }
-}
-
-    echo <<<_END
-                <div class="main-thread">
-                    <a href="thread.html">
-                    <div class="user-profile">
-                        <img src="images/userIcon.png">
-                        <div>
-                            <p>User name / author</p>
-                            <span class="when-posted">July 24 2023 2:31 PM</span>
-                        </div>
-                    </div>
-                    <div class="main-thread-title">
-                            All kittens are cute because
-                    </div>
-                    </a>
-                    </div>  
-            _END;
+            echo <<<_END
+                        <div class="main-thread">
+                            <a href="thread.html">
+                            <div class="user-profile">
+                                <img src="images/userIcon.png">
+                                <div>
+                                    <p>User name / author</p>
+                                    <span class="when-posted">July 24 2023 2:31 PM</span>
+                                </div>
+                            </div>
+                            <div class="main-thread-title">
+                                    $thread_name
+                            </div>
+                            </a>
+                            </div>  
+                    _END;
+        }
+    // }
 }
 
 ?>

@@ -49,6 +49,7 @@ else {
                 echo "<br>valid logon";
                 session_start();
                 $_SESSION['logged_in'] = TRUE;
+                header ("Location: threads_main2.php");
             }
             //couldn't login, print invalid user name/password combo.
             else {

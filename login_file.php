@@ -6,6 +6,7 @@
  $user="root";
  $pass="";
  $db="web_assign2";
+ $port="3306";
  $attr = "mysql:host=$host;dbname=$db;";
 
 //  $opts = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
