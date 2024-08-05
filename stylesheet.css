@@ -1,0 +1,292 @@
+/*Nav bars CSS*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #d3d4db;
+}
+
+li, a, .navBtn {
+  font-size: 18px;
+  color: #edf0f1;
+  text-decoration: none;
+} 
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: rgb(190, 123, 0);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  padding: 0;
+  cursor: pointer;
+  margin-right: auto;
+  height: 60px;
+  width: 180px;
+  background-color: rgb(190, 123, 0);
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: rgba(0, 0, 0, 0.701);
+}
+
+.navItem {
+  background-color: rgb(190, 123, 0);
+  justify-content: center; 
+
+}
+
+.navBtn {
+  padding: 5px 10px;
+  background-color: rgb(160, 105, 2);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.navBtn:hover {
+  background-color: rgba(134, 88, 32, 0.38);
+  color: black;
+}
+
+.search-box {
+  background: rgb(160, 105, 2);
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.search-box img {
+  width: 20px;
+  background: rgb(160, 105, 2);
+}
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  color: black;
+}
+
+::placeholder {
+  color: white;
+  font-size: large;
+}
+
+
+/*Left bar*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 5%;
+  max-width: 85%;
+}
+
+.left-bar{
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+}
+
+.left-bar-Btn{
+  padding: 5px 10px;
+  background-color: rgb(160, 105, 2);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.main {
+
+  
+}
+
+.left-link a, .left-topic a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #626262;
+  width: fit-content;
+  width: 25;
+  margin-right: 15px;
+}
+
+.left-link, .left-topic {
+  border-bottom: 1px solid #000000;
+}
+
+.left-topic p {
+  margin: 25px 0;
+  color: #626262;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*New Threads post*/
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.T-Btn {
+  background-color: rgba(43, 43, 43, 0.187);
+  border-radius: 8px;
+  border-width: 0;
+  color: #2b2b2b;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 0x solid #ddd;
+  border-radius: 4px;
+}
+
+textarea{
+  resize: none;
+  height: 300px;
+  border: 0x solid #ddd;
+}
+
+.writepost-title {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #000000;
+  background: transparent;
+}
+
+
+/*Main/Home page*/
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-profile p {
+  margin-bottom: -5px;
+  font-weight: 500;
+  color: #626262;
+}
+
+.main-thread {
+  width: 100%;
+  background: #ffffff5f;
+  border-radius: 6px;
+  padding: 3px;
+  color: #626262;
+  margin: 20px 0;
+  border-bottom: 2px solid black;
+}
+
+.user-profile span {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+.main-thread-title {
+  padding-left: 55px;
+  font-size: 20px;
+  color: black;
+}
+
+.navigation-container-left a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navigation-container-left img {
+  width:20px;
+  height:18x;
+}
+
+.navigation-container-right a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navigation-container-right img {
+  width:20px;
+  height:18x;
+}
+
+/*new post threads.html*/
+
+.post-title {
+  width: 100%;  
+  text-align: center;
+}
