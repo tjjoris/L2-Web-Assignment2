@@ -14,6 +14,7 @@ PRIMARY KEY (id));
 CREATE TABLE IF NOT EXISTS threads
 ( id int(11) NOT NULL AUTO_INCREMENT,
 thread_name varchar(200) NOT NULL,
+last_post_time DATETIME NOT NULL,
 CONSTRAINT threads_pk PRIMARY KEY(id));
 
 CREATE TABLE IF NOT EXISTS posts

@@ -8,6 +8,32 @@
 </head>
 <body>
     
+<header>
+        <img class="logo" src="images/ourLogo.png" alt="logo">
+        <div class="search-box">
+            <img src="images/search.png">
+            <input type="text" placeholder="Search">
+        </div>
+        <a class="navBtn" href="#"><button class="navBtn">Sign In</button></a>
+        <a class="navBtn" href="#"><button class="navBtn">Sign Up</button></a>
+    </header>
+    <div class="container">
+        <div class="left-bar">
+            <div class="left-link">
+                <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">Post A Thread</button></a>
+                <a href="#Home">Home</a>
+                <a href="#MostPopular">Most popular</a>
+            </div>
+            <div class="left-topic">
+                <p>Topics</p>
+                <a href="thread.html"><u>All kittens are cute because</u></a>
+                <a href="#topic2"><u>I wish kittens were fuzzier.</u></a>
+                <a href="#topic3"><u>Need advice on how to dye my kitten</u></a>
+                <a href="#topic4"><u>Why cats make the best pets</u></a>
+            </div>
+        </div>
+            <div class="main">
+    
 <?php
     //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
@@ -32,7 +58,7 @@ else {
     // function show_thread($thread_id){
         //query for posts in thead
         // $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
-        $qry_all_threads="SELECT * FROM threads";
+        $qry_all_threads="SELECT thread_name, posts.post_time AS post_time, logins.uname AS uname FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id";
 
         //run query to get posts
         $result_set = mysqli_query($conn, $qry_all_threads);
@@ -53,6 +79,8 @@ else {
             // echo "Thread ID: " . $row['id'] . "<br>";
             // echo "Thread Title: " . $row['thread_name'] . "<br>";
             $thread_name = $row['thread_name'];
+            $op_name = $row['uname'];
+            $post_time = $row['post_time'];
             // echo "<hr>";
         // }
     
@@ -63,8 +91,8 @@ else {
                             <div class="user-profile">
                                 <img src="images/userIcon.png">
                                 <div>
-                                    <p>User name / author</p>
-                                    <span class="when-posted">July 24 2023 2:31 PM</span>
+                                    <p>$op_name / author</p>
+                                    <span class="when-posted">$post_time</span>
                                 </div>
                             </div>
                             <div class="main-thread-title">
@@ -78,7 +106,7 @@ else {
 }
 
 ?>
-
+</div>
 <form action="new_thread.php" method="POST" enctype="text/plain">
     <button type="submit" >new Thread</button>
 </body>

@@ -40,7 +40,7 @@ else {
             //else, you are connected.
             else {
                 //add to thread query
-                $qry_insert_threads="INSERT INTO threads (thread_name) VALUES ('$threadtitle')";
+                $qry_insert_threads="INSERT INTO threads (thread_name, last_post_time) VALUES ('$threadtitle', NOW())";
                 
                 //get last surrogate key query
                 $qry_thread_key="SELECT LAST_INSERT_ID() FROM threads";
