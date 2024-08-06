@@ -30,7 +30,7 @@ if ($conn->connect_error){
 }
 else {
     if (($thread_number != null) && (isset($thread_number))) {
-        //query to get this thread.
+        //query to get this thread title.
         $qry_this_thread="SELECT threads.thread_name AS thread_name, posts.post_time AS post_time, logins.uname AS uname, posts.message AS message FROM threads JOIN posts ON posts.thread_id = threads.id JOIN logins ON logins.id = posts.login_id WHERE posts.thread_id = $thread_number";
 
         //run query to get posts
@@ -87,10 +87,13 @@ if ((isset($_SESSION)) && (isset($_SESSION[''])) && ($_SESSION[''])) {
                     <a href="#topic4"><u>Why cats make the best pets</u></a>
                 </div>
             </div>
-            <div class="post-title"><h1>All kittens are cute because</h1>
+            <?php
+            echo <<<_END
+            <div class="post-title"><h1>$thread_name</h1>
+            
                 <div class="post-threads">
-                        
-                <?php
+            _END;
+                       
                 //if sqli connection error print error message.
 if ($conn->connect_error){
     echo "failed to connect to db".$conn->connect_error;
@@ -110,7 +113,6 @@ else {
                     $uname = $row['uname'];
                     $post_time = $row['post_time'];
                     $message = $row['message'];
-                    echo $message;
                     // php to display each post in thread
                     echo <<<_END
                         <div class="main-thread">
