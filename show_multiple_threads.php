@@ -17,6 +17,10 @@ require_once "start_session.php";
 
 require_once "sidebar.php";
 
+
+echo "<div class='main'>";
+echo "<div class='all-threads'>";
+
 //check if session is set
 if (!isset($_SESSION)){
     echo "session is not set";
@@ -57,15 +61,15 @@ else {
         $post_time = $first_record['post_time'];
         $uname = $first_record['uname'];
 
-        echo "<br>";
-        echo $thread_id;
-        echo "<br>";
-        echo $thread_name;
-        echo "<br>";
-        echo $post_time;
-        echo "<br>";
-        echo $uname;
-        echo "<br>";
+        // echo "<br>";
+        // echo $thread_id;
+        // echo "<br>";
+        // echo $thread_name;
+        // echo "<br>";
+        // echo $post_time;
+        // echo "<br>";
+        // echo $uname;
+        // echo "<br>";
 
         
         echo <<<_END
@@ -82,7 +86,7 @@ else {
                     $thread_name
             </div>
             </a>
-            </div>  
+        </div>  
         _END;
 
         }
@@ -106,3 +110,7 @@ else {
     }
 }
 ?>
+</div>
+</div>
+</body>
+</html>
