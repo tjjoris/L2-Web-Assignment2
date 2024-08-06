@@ -7,38 +7,14 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    
-<header>
-        <img class="logo" src="images/ourLogo.png" alt="logo">
-        <div class="search-box">
-            <img src="images/search.png">
-            <input type="text" placeholder="Search">
-        </div>
-        <a class="navBtn" href="#"><button class="navBtn">Sign In</button></a>
-        <a class="navBtn" href="#"><button class="navBtn">Sign Up</button></a>
-    </header>
-    <div class="container">
-        <div class="left-bar">
-            <div class="left-link">
-                <!-- <a class="left-bar-Btn" href="new_thread.html"> -->
-                <form action="new_thread2.php" method="POST" enctype="text/plain">
-                    <button class="left-bar-Btn" type="submit">Post A Thread</button>
-                </form>
-                <!-- </a> -->
-                <a href="#Home">Home</a>
-                <a href="#MostPopular">Most popular</a>
-            </div>
-            <div class="left-topic">
-                <p>Topics</p>
-                <a href="thread.html"><u>All kittens are cute because</u></a>
-                <a href="#topic2"><u>I wish kittens were fuzzier.</u></a>
-                <a href="#topic3"><u>Need advice on how to dye my kitten</u></a>
-                <a href="#topic4"><u>Why cats make the best pets</u></a>
-            </div>
-        </div>
-            <div class="main">
+
+
+           
     
 <?php
+require_once "sidebar.php";
+
+echo " <div class='main'>";
     //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 require_once "start_session.php";
@@ -65,7 +41,7 @@ else {
     // function show_thread($thread_id){
         //query for posts in thead
         // $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
-        $qry_all_threads="SELECT threads.id AS id, thread_name, posts.post_time AS post_time, logins.uname AS uname FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id";
+        $qry_all_threads="SELECT threads.id AS id, thread_name, posts.post_time AS post_time, logins.uname AS uname, threads.last_post_time AS last_post_time FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id ORDER BY threads.last_post_time DESC";
 
         //run query to get posts
         $result_set = mysqli_query($conn, $qry_all_threads);
@@ -115,7 +91,7 @@ else {
 
 ?>
 </div>
-<form action="new_thread.php" method="POST" enctype="text/plain">
-    <button type="submit" >new Thread</button>
+<!-- <form action="new_thread.php" method="POST" enctype="text/plain">
+    <button type="submit" >new Thread</button> -->
 </body>
 </html>

@@ -33,11 +33,11 @@ else {
     else {
         $result_set = $_SESSION['show_threads'];
 
-        echo "showing threads";
+        // echo "showing threads";
 
         foreach ($result_set as $row) {
             $current_thread_id = $row['id'];
-            echo $row['id'];
+            // echo $row['id'];
 
         //create a new mysqli connection
         $conn = new mysqli($host,$user,$pass,$db,$port);

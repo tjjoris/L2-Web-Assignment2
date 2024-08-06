@@ -37,6 +37,8 @@ else {
             //add to thread query
             $qry_insert_threads="INSERT INTO posts (thread_id, login_id, post_time, message) VALUES ('$thread_number', '$login_id', NOW(), '$content')";
             $result_set = mysqli_query($conn, $qry_insert_threads);
+            $qry_update_post_time="UPDATE threads SET last_post_time=NOW() WHERE id = $thread_number";
+            $update_result = mysqli_query($conn, $qry_update_post_time);
         }
         header("Location: thread2.php");
     }
