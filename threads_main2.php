@@ -65,7 +65,7 @@ else {
     // function show_thread($thread_id){
         //query for posts in thead
         // $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
-        $qry_all_threads="SELECT thread_name, posts.post_time AS post_time, logins.uname AS uname FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id";
+        $qry_all_threads="SELECT threads.id AS id, thread_name, posts.post_time AS post_time, logins.uname AS uname FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id";
 
         //run query to get posts
         $result_set = mysqli_query($conn, $qry_all_threads);
@@ -88,13 +88,14 @@ else {
             $thread_name = $row['thread_name'];
             $op_name = $row['uname'];
             $post_time = $row['post_time'];
+            $thread_id = $row['id'];
             // echo "<hr>";
         // }
     
 
             echo <<<_END
                         <div class="main-thread">
-                            <a href="thread.html">
+                            <a href="thread_redirect.php?thread_id=$thread_id">
                             <div class="user-profile">
                                 <img src="images/userIcon.png">
                                 <div>

@@ -40,6 +40,7 @@ else {
             // echo "Thread ID: " . $row['id'] . "<br>";
             // echo "Thread Title: " . $row['thread_name'] . "<br>";
             $thread_name = $row['thread_name'];
+            $thread_name = $thread_name == NULL ? $thread_name : "";
             $op_name = $row['uname'];
             $post_time = $row['post_time'];
             $message = $row['message'];
@@ -130,7 +131,6 @@ else {
                             </div>
                             <div class="main-thread-title">
                                 $message
-                                TEST123
                             </div>
                             </a>
                         </div>
