@@ -57,8 +57,10 @@ else {
                     $_SESSION['thread_id'] = $last_id;
                 }
                 
+                $login_id = $_SESSION['login_id'];
+
                 $qry_insert_posts="INSERT INTO posts (thread_id, login_id, post_time, message) 
-                        VALUES ('$last_id', '1', NOW(), '$content_container')";
+                        VALUES ('$last_id', '$login_id', NOW(), '$content_container')";
 
                 //insert into posts
                 $result_set = mysqli_query($conn, $qry_insert_posts);

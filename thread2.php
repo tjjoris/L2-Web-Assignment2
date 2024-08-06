@@ -135,6 +135,8 @@ else {
                 }
             }
         }
+
+        
                 ?>
                 </div>
 
@@ -192,21 +194,23 @@ else {
                 </div> -->
 
                 <!-- thread response -->
-                <!-- <div class="post">
-                    
-                    <div class="post-container">
-                        <div class="author-container">
-                            <span class="author-label">Author</span>
-                            <span class="author-text">Me283838</span>                        
+                 <form action="submit_reply.php" method="POST">
+                    <div class="post">
+                        
+                        <div class="post-container">
+                            <div class="author-container">
+                                <span class="author-label">Author</span>
+                                <span class="author-text">Me283838</span>                        
+                            </div>
+                            <label for="content-container" class="message-label">Message:</label>
+                            <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text">
+                            </textarea>
                         </div>
-                        <label for="content-container" class="message-label">Message:</label>
-                        <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text">
-                        </textarea>
+                        <div class="post-button-container">
+                            <button type="submit" >Reply</button>
+                        </div>
                     </div>
-                    <div class="post-button-container">
-                        <button type="submit" >Reply</button>
-                    </div>
-                </div> -->
+                </form>
 
                  <div class="thread-navigation-buttons">
                     <div class="navigation-container-left">            
