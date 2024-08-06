@@ -22,11 +22,14 @@ if (isset($_SESSION['thread_id'])) {
 // if (isset($_POST)){
 //     if $_SESSION['last_page'] == "threads_main";
 // }
+
+
+require_once "sidebar.php";
 ?>
 
 
     <!-- <form action="submit-new-thread.php" method="POST" enctype="text/plain"> -->
-        <header>
+        <!-- <header>
             <img class="logo" src="images/ourLogo.png" alt="logo">
             <div class="search-box">
                 <img src="images/search.png">
@@ -35,13 +38,13 @@ if (isset($_SESSION['thread_id'])) {
             <a class="navBtn" href="#"><button class="navBtn">Sign In</button></a>
             <a class="navBtn" href="#"><button class="navBtn">Sign Up</button></a>
         </header>
-        <div class="container">
-            <div class="left-bar">
+        <div class="container"> -->
+            <!-- <div class="left-bar">
                 <div class="left-link">
                     <div class="new-threadBtn">
-                        <!-- <form action="new_thread.php" method="POST" enctype="text/plain">
+                        <form action="new_thread.php" method="POST" enctype="text/plain">
                             <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">Post A Thread</button></a>
-                        </form> -->
+                        </form>
                     </div>
                     <a href="threads_main.html">Home</a>
                     <a href="#MostPopular">Most popular</a>
@@ -53,7 +56,7 @@ if (isset($_SESSION['thread_id'])) {
                     <a href="#topic3"><u>Need advice on how to dye my kitten</u></a>
                     <a href="#topic4"><u>Why cats make the best pets</u></a>
                 </div>
-            </div>
+            </div> -->
             <div class="main">
                 <label class="title">New Topic</label><br>
                 <form action="submit-new-thread.php" method="POST">

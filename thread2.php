@@ -55,10 +55,13 @@ else {
 if ((isset($_SESSION)) && (isset($_SESSION[''])) && ($_SESSION[''])) {
 
 }
+
+require_once "sidebar.php";
+
 ?>
 
-    <form action="thread.php" method="POST" enctype="text/plain">
-        <header>
+    <!-- <form action="thread.php" method="POST" enctype="text/plain"> -->
+        <!-- <header>
             <img class="logo" src="images/ourLogo.png" alt="logo">
             <div class="search-box">
                 <img src="images/search.png">
@@ -73,8 +76,9 @@ if ((isset($_SESSION)) && (isset($_SESSION[''])) && ($_SESSION[''])) {
             <div class="left-bar">
                 <div class="left-link">
                     <div class="new-threadBtn">
-                        <form action="new_thread.php" method="POST" enctype="text/plain"></form>
-                        <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">Post A Thread</button></a>
+                        <form action="new_thread2.php" method="POST" enctype="text/plain">
+                        <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">New Thread</button></a>
+                        </form>
                     </div>
                     <a href="threads_main.html">Home</a>
                     <a href="#MostPopular">Most popular</a>
@@ -86,7 +90,7 @@ if ((isset($_SESSION)) && (isset($_SESSION[''])) && ($_SESSION[''])) {
                     <a href="#topic3"><u>Need advice on how to dye my kitten</u></a>
                     <a href="#topic4"><u>Why cats make the best pets</u></a>
                 </div>
-            </div>
+            </div> -->
             <?php
             echo <<<_END
             <div class="post-title"><h1>$thread_name</h1>
@@ -223,6 +227,6 @@ else {
                     </div>
                 </div>
             </div>
-    </form>
+    <!-- </form> -->
 </body>
 </html>
