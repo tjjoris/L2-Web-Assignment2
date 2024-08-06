@@ -15,8 +15,6 @@
                 <img src="images/search.png">
                 <input type="text" placeholder="Search">
             </div>
-            <nav>
-            </nav>
             <a class="navBtn" href="#"><button class="navBtn">Sign In</button></a>
             <a class="navBtn" href="#"><button class="navBtn">Sign Up</button></a>
         </header>
@@ -24,90 +22,71 @@
             <div class="left-bar">
                 <div class="left-link">
                     <div class="new-threadBtn">
-                        <form action="new_thread.php" method="POST" enctype="text/plain"></form>
-                        <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">Post A Thread</button></a>
+                        <form action="new_thread2.php" method="POST" enctype="text/plain"></form>
+                        <a class="left-bar-Btn" href="new_thread2.html"><button class="left-bar-Btn">Post A Thread</button></a>
                     </div>
-                    <a href="threads_main.html">Home</a>
+                    <a href="threads_main2.html">Home</a>
                     <a href="#MostPopular">Most popular</a>
                 </div>
                 <div class="left-topic">
                     <p>Topics</p>
-                    <a href="#topic1"><u>All kittens are cute because</u></a>
+                    <a href="thread2.html"><u>All kittens are cute because</u></a>
                     <a href="#topic2"><u>I wish kittens were fuzzier.</u></a>
                     <a href="#topic3"><u>Need advice on how to dye my kitten</u></a>
                     <a href="#topic4"><u>Why cats make the best pets</u></a>
                 </div>
             </div>
-            <div class="post-title"><h1>All kittens are cute because</h1>
+            <div class="post-title">
+                <h1>All kittens are cute because</h1>
                 <div class="post-threads">
                     <div class="main-thread">
-                        <a href="#mainpost1">
                         <div class="user-profile">
                             <img src="images/userIcon.png">
                             <div>
-                                <p>User name / author</p>
-                                <span>July 24 2023 2:31 PM</span>
+                                <p>Coolguy21</p>
+                                <span class="date">July 24 2023 2:31 PM</span>
                             </div>
                         </div>
                         <div class="main-thread-title">
                             Kittens are cute because I think they are.
                         </div>
-                        </a>
                     </div>
-                </div>
 
-        
-
-            <!-- <div class="thread">
-                <div class="post" class="first-post">
-                    
-                    <div class="author-container">
-                        <span class="author-label">Author</span>
-                        <span class="author-text">Coolguy21</span>                        
-                    </div>
-                    <div class="post-container">
-                        <div >
-                            Jan, 21, 2024
+                    <div class="main-thread">
+                        <div class="user-profile">
+                            <img src="images/userIcon.png">
+                            <div>
+                                <p>SomeDude</p>
+                                <span class="date">July 28 2023 6:40 PM</span>
+                            </div>
                         </div>
-                         <div class="posted-text">
-                            
-                         </div>
-                    </div>
-                </div>
-
-
-                <div class="post">
-                    <div class="author-container">
-                        <span class="author-label">Author</span>
-                        <span class="author-text">SomeDude</span>                        
-                    </div>
-                    <div class="when-posted">
-                        Jan, 21, 2024
-                    </div>
-                    <div class="post-container">
-                         <div class="posted-text">
+                        <div class="main-thread-title">
                             No i think kittns R dumb lol.
-                         </div>
-                    </div>
-                </div>
-                -----   
-                <div class="post">
-                    <div class="author-container">
-                        <span class="author-label">Author</span>
-                        <span class="author-text">AnotherPerson</span>                        
-                    </div>
-                    <div class="when-posted">
-                        Jan, 21, 2024
-                    </div>
-                    <div class="post-container">
-                         <div class="posted-text">
+                        </div>
+                    </div>  
+                    
+                    <div class="main-thread">
+                        <div class="user-profile">
+                            <img src="images/userIcon.png">
+                            <div>
+                                <p>Laura</p>
+                                <span class="date">July 27 2023 4:23 PM</span>
+                            </div>
+                        </div>
+                        <div class="main-thread-title">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
                             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                         </div>
+                        </div>
+                    </div>  
+
+                    <div class="post-button-container">
+                        <label for="content-container" class="message-label">Message:</label><br>
+                        <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text">
+                        </textarea><br>
+                        <button type="submit" class="T-Btn">Reply to post</button>
                     </div>
-                </div> -->
 
                 <!-- thread response -->
                 <!-- <div class="post">
@@ -117,13 +96,9 @@
                             <span class="author-label">Author</span>
                             <span class="author-text">Me283838</span>                        
                         </div>
-                        <label for="content-container" class="message-label">Message:</label>
-                        <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text">
-                        </textarea>
+
                     </div>
-                    <div class="post-button-container">
-                        <button type="submit" >Reply</button>
-                    </div>
+
                 </div> -->
 
                  <div class="thread-navigation-buttons">
