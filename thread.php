@@ -6,12 +6,15 @@ require_once "login_file.php";
 
 
 require_once "start_session.php";
+if (isset($_SESSION['thread_id'])) {
     $thread_id = $_SESSION['thread_id'];
     echo $thread_id;
+}
 
     if (!$_SESSION['logged_in']) {
         header("Location:index.php");
     }
+
 
 function show_thread($thread_id){
     echo "test";

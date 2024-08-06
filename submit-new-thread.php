@@ -4,8 +4,8 @@ require_once "start_session.php";
 //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 
-$var = $_POST['threadtitle'];
-echo $var;
+// $var = $_POST['threadtitle'];
+// echo $var;
 
 $conn=new mysqli($host,$user,$pass,$db);
 //if connection error send error message.

@@ -1,6 +1,7 @@
 <?php
 require_once "new_thread_script.php";
 require_once "start_session.php";
+$thread_id = $_SESSION['thread_id'];
 //$new_thread = new New_thread_class();
 // class new_thread {
 //     function __construct(){
@@ -33,10 +34,16 @@ require_once "start_session.php";
                 <div class="thread">
                 <input type="text" name="uname" id="uname">
                     <div class="post" class="first-post">
-                        <div class="thread-title-container">
-                            <label for="threadtitle" class="title-label">Test Title:</label>
-                            <input type="text" name='threadtitle' id="threadtitle" placeholder="enter title here" class="title-text">
-                        </div>
+                        <?php
+                        if ($thread_id == null) {
+                            echo <<<_END
+                                <div class="thread-title-container">
+                                    <label for="threadtitle" class="title-label">Test Title:</label>
+                                    <input type="text" name='threadtitle' id="threadtitle" placeholder="enter title here" class="title-text">
+                                </div>
+                            _END;
+                        }
+                        ?>
                         <div class="author-container">
                             <span class="author-label">Author</span>
                             <span class="author-text">Coolguy21</span>                        

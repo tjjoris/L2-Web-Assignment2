@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+
+<?php
+//get login variables, these are requred for script to run, and will only be called once.
+require_once "login_file.php";
+require_once "start_session.php";
+$thread_number = NULL;
+$result_set = NULL;
+
+//create a new mysqli connection
+$conn = new mysqli($host,$user,$pass,$db,$port);
+
+//if sqli connection error print error message.
+if ($conn->connect_error){
+    echo "failed to connect to db".$conn->connect_error;
+}
+else {
+    if ($thread_number != null) && (isset($thread_number)) {
+        //query to get this thread.
+        $qry_this_thread="SELECT threads.thread_name AS thread_name, posts.post_time AS post_time, logins.uname AS uname, posts.message AS message FROM threads JOIN posts ON posts.thread_id = threads.id JOIN logins ON logins.id = posts.login_id WHERE posts.thread_id = $thread_number";
+
+        //run query to get posts
+        $result_set = mysqli_query($conn, $qry_this_thread);
+    }
+
+}
+
+if ((isset($_SESSION)) && (isset($_SESSION[''])) && ($_SESSION[''])) {
+
+}
+?>
+
     <form action="thread.php" method="POST" enctype="text/plain">
         <header>
             <img class="logo" src="images/ourLogo.png" alt="logo">

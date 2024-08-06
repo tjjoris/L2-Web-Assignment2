@@ -20,7 +20,11 @@
     <div class="container">
         <div class="left-bar">
             <div class="left-link">
-                <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">Post A Thread</button></a>
+                <!-- <a class="left-bar-Btn" href="new_thread.html"> -->
+                <form action="new_thread2.php" method="POST" enctype="text/plain">
+                    <button class="left-bar-Btn" type="submit">Post A Thread</button>
+                </form>
+                <!-- </a> -->
                 <a href="#Home">Home</a>
                 <a href="#MostPopular">Most popular</a>
             </div>
@@ -37,6 +41,9 @@
 <?php
     //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
+require_once "start_session.php";
+
+$_SESSION['last_page'] = "threads_main";
 
 //create a new mysqli connection
 $conn = new mysqli($host,$user,$pass,$db,$port);
