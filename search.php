@@ -38,8 +38,16 @@ else {
                 //get result set
                 $result_set = mysqli_query($conn, $qry_search);
                 
-                while ($row = mysqli_fetch_assoc($result_set)) {
-                    echo $row['id'];
+                //query has values
+                if ($result_set) {
+
+                    $results_array = mysqli_fetch_all($result_set, MYSQLI_ASSOC);
+
+                    // while ($row = mysqli_fetch_assoc($result_set)) {
+                    //     echo $row['id'];
+                    // }
+                    $_SESSION['show_threads'] = $results_array;
+                    header("Location: show_multiple_threads.php");
                 }
             }
         }
