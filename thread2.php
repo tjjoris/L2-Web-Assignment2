@@ -43,7 +43,7 @@ else {
             $op_name = $row['uname'];
             $post_time = $row['post_time'];
             $message = $row['message'];
-            echo $message;
+            // echo $message;
         }
     }
     else {
@@ -89,20 +89,51 @@ if ((isset($_SESSION)) && (isset($_SESSION[''])) && ($_SESSION[''])) {
             </div>
             <div class="post-title"><h1>All kittens are cute because</h1>
                 <div class="post-threads">
-                    <div class="main-thread">
-                        <a href="#mainpost1">
-                        <div class="user-profile">
-                            <img src="images/userIcon.png">
-                            <div>
-                                <p>User name / author</p>
-                                <span>July 24 2023 2:31 PM</span>
+                        
+                <?php
+                //if sqli connection error print error message.
+if ($conn->connect_error){
+    echo "failed to connect to db".$conn->connect_error;
+}
+else {
+    if (($thread_number != null) && (isset($thread_number))) {
+        //query to get this thread.
+        $qry_this_thread="SELECT threads.thread_name AS thread_name, posts.post_time AS post_time, logins.uname AS uname, posts.message AS message FROM threads JOIN posts ON posts.thread_id = threads.id JOIN logins ON logins.id = posts.login_id WHERE posts.thread_id = $thread_number";
+
+        //run query to get posts
+        $result_set = mysqli_query($conn, $qry_this_thread);
+
+                while ($row = mysqli_fetch_assoc($result_set)) {
+                    // echo "Thread ID: " . $row['id'] . "<br>";
+                    // echo "Thread Title: " . $row['thread_name'] . "<br>";
+                    $thread_name = $row['thread_name'];
+                    $uname = $row['uname'];
+                    $post_time = $row['post_time'];
+                    $message = $row['message'];
+                    echo $message;
+                    // php to display each post in thread
+                    echo <<<_END
+                        <div class="main-thread">
+                            <a href="#mainpost1">
+                            <div class="user-profile">
+                                <img src="images/userIcon.png">
+                                <div>
+                                    <p>$uname / author</p>
+                                    <span>$post_time</span>
+                                </div>
                             </div>
+                            <div class="main-thread-title">
+                                $message
+                                TEST123
+                            </div>
+                            </a>
                         </div>
-                        <div class="main-thread-title">
-                            Kittens are cute because I think they are.
-                        </div>
-                        </a>
-                    </div>
+                        
+                    _END;
+                }
+            }
+        }
+                ?>
                 </div>
 
         
