@@ -8,6 +8,8 @@
 <body>
     
 <?php
+require_once "start_session.php";
+
     //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 
@@ -23,7 +25,28 @@ else {
 }
 
 ?>
+<!-- go to thread -->
+<form action="thread.php" method="POST" enctype="text/plain">
+    <button onclick="<?php echo "hello world;" ?>">show Thread</button>
+</form>
+
+<?php
+// require_once "thread.php";
+?>
+<?php
+function test1(){
+    echo "test1";
+}
+?>
+
+<!-- <button onclick="<?php test1(); ?>">hello world</button> -->
+
+<!-- ne thread -->
 <form action="new_thread.php" method="POST" enctype="text/plain">
     <button type="submit" >new Thread</button>
+</form>
+
+
+
 </body>
 </html>
