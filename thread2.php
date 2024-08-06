@@ -16,6 +16,11 @@ require_once "start_session.php";
 $thread_number = NULL;
 $result_set = NULL;
 
+
+if ((isset($_SESSION))) {
+    $thread_number = $_SESSION['thread_id'];
+}
+
 //create a new mysqli connection
 $conn = new mysqli($host,$user,$pass,$db,$port);
 
@@ -24,12 +29,25 @@ if ($conn->connect_error){
     echo "failed to connect to db".$conn->connect_error;
 }
 else {
-    if ($thread_number != null) && (isset($thread_number)) {
+    if (($thread_number != null) && (isset($thread_number))) {
         //query to get this thread.
         $qry_this_thread="SELECT threads.thread_name AS thread_name, posts.post_time AS post_time, logins.uname AS uname, posts.message AS message FROM threads JOIN posts ON posts.thread_id = threads.id JOIN logins ON logins.id = posts.login_id WHERE posts.thread_id = $thread_number";
 
         //run query to get posts
         $result_set = mysqli_query($conn, $qry_this_thread);
+
+        while ($row = mysqli_fetch_assoc($result_set)) {
+            // echo "Thread ID: " . $row['id'] . "<br>";
+            // echo "Thread Title: " . $row['thread_name'] . "<br>";
+            $thread_name = $row['thread_name'];
+            $op_name = $row['uname'];
+            $post_time = $row['post_time'];
+            $message = $row['message'];
+            echo $message;
+        }
+    }
+    else {
+        echo "thread number not set";
     }
 
 }

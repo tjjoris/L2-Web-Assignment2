@@ -52,14 +52,18 @@ else {
 
                 //get surrogate key of last inserted row.
                 $last_id = $conn->insert_id;
+
+                if ((isset($_SESSION))) {
+                    $_SESSION['thread_id'] = $last_id;
+                }
                 
                 $qry_insert_posts="INSERT INTO posts (thread_id, login_id, post_time, message) 
                         VALUES ('$last_id', '1', NOW(), '$content_container')";
 
                 //insert into posts
                 $result_set = mysqli_query($conn, $qry_insert_posts);
-                
-                
+                echo "test";
+                header ("Location: thread2.php");
 
             }
 
