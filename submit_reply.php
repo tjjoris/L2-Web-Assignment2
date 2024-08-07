@@ -25,7 +25,7 @@ else {
         $login_id = $_SESSION['login_id'];
 
         //create a new mysqli connection
-        $conn=new mysqli($host,$user,$pass,$db);
+        // $conn=new mysqli($host,$user,$pass,$db);
 
                         
         //if sqli connection error print error message.
