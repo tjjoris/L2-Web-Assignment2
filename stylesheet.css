@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px 10%;
+  padding: 5px 10%;
   background-color: rgb(190, 123, 0);
   position: sticky;
   top: 0;
@@ -28,7 +28,7 @@ header {
   padding: 0;
   cursor: pointer;
   margin-right: auto;
-  height: 60px;
+  height: 80px;
   width: 180px;
   background-color: rgb(190, 123, 0);
 }
@@ -146,6 +146,14 @@ header {
   margin-right: 15px;
 }
 
+.left-bar a:hover {
+  background-color: rgba(190, 123, 0, 0.422);
+  color: #001f40; 
+  text-decoration: underline; 
+  padding: 3px;
+  border-radius: 5px;
+}
+
 .left-link, .left-topic {
   border-bottom: 1px solid #000000;
 }
@@ -164,10 +172,10 @@ header {
   font-weight: bold;
 }
 
-
 .main {
   flex: 1;
   padding: 20px;
+  max-width: 90%;
 }
 
 .T-Btn {
@@ -232,6 +240,7 @@ textarea{
   margin-bottom: -5px;
   font-weight: 500;
   color: #626262;
+  line-height: 2; 
 }
 
 .main-thread {
@@ -255,6 +264,16 @@ textarea{
   color: black;
 }
 
+.main-thread a:hover {
+  background-color: rgba(190, 123, 0, 0.422);
+  color: #001f40; 
+  text-decoration: underline;
+  padding: 5px;
+  border-radius: 5px; 
+}
+
+/*Bottom nav*/
+
 .navigation-container-left a {
   float: left;
   display: block;
@@ -264,6 +283,15 @@ textarea{
   text-decoration: none;
   font-size: 17px;
 }
+
+.navigation-container-left a:hover{
+  transform: scale(1.4);
+}
+
+.navigation-container-right a:hover{
+  transform: scale(1.4);
+}
+
 .navigation-container-left img {
   width:20px;
   height:18x;
@@ -284,9 +312,46 @@ textarea{
   height:18x;
 }
 
+
 /*new post threads.html*/
 
 .post-title {
   width: 100%;  
   text-align: center;
 }
+
+textarea#content-container{
+  width: 60%;
+  resize: none;
+  height: 100px;
+  border: 0x solid #ddd;
+}
+
+.message-label {
+  font-size: 20px;
+}
+
+/* .filter {
+  position: relative;
+  width: 195px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  border: 1px solid lightblue;
+}
+
+.placeholder {
+  position: absolute;
+  left: 400px;
+  top: 35px;
+  background-color: rgb(160, 105, 2);
+  padding: 0 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.filter:focus ~ .placeholder,
+.filter:valid ~ .placeholder {
+  display: none;
+} */
