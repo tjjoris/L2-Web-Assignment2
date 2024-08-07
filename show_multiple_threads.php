@@ -98,13 +98,11 @@ else {
 }
 echo <<<_END
                 <div class='thread-navigation-buttons'>
-                    <div class='navigation-container-left'>            
-                        <a href='show_previous_10_threads.php'><img src='images/2left.png' alt='first_page' ></a>
+                    <div class='navigation-container-left'>    
                         <a href='show_previous_10_threads.php'><img src='images/1left.png' alt='previous_page'></a>
                     </div>
                     <div class='navigation-container-right'>
-                        <a href='show_next_10_threads.php'><img src='images/2right.png' alt='next_page'></a> 
-                        <a href='show_next_10_threads.php'><img src='images/1right.png' alt='last_page'></a>
+                        <a href='show_next_10_threads.php'><img src='images/1right.png' alt='next_page'></a>
                     </div>
                 </div>
 _END;

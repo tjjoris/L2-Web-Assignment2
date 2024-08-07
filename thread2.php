@@ -123,13 +123,9 @@ else {
                 </form>
 
                  <div class="thread-navigation-buttons">
-                    <div class="navigation-container-left">            
-                        <a href="#first_page"><img src="images/2left.png" alt="first_page" ></a>
-                        <a href="#previous_page"><img src="images/1left.png" alt="previous_page"></a>
+                    <div class="navigation-container-left">  
                     </div>
                     <div class="navigation-container-right">
-                        <a href="#next_page"><img src="images/2right.png" alt="next_page"></a>
-                        <a href="#last_page"><img src="images/1right.png" alt="last_page"></a>
                     </div>
                 </div>
             </div>
