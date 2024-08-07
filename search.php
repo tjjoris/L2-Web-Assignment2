@@ -43,9 +43,6 @@ else {
 
                     $results_array = mysqli_fetch_all($result_set, MYSQLI_ASSOC);
 
-                    // while ($row = mysqli_fetch_assoc($result_set)) {
-                    //     echo $row['id'];
-                    // }
                     $_SESSION['show_threads'] = $results_array;
                     header("Location: show_multiple_threads.php");
                 }

@@ -61,16 +61,6 @@ else {
         $post_time = $first_record['post_time'];
         $uname = $first_record['uname'];
 
-        // echo "<br>";
-        // echo $thread_id;
-        // echo "<br>";
-        // echo $thread_name;
-        // echo "<br>";
-        // echo $post_time;
-        // echo "<br>";
-        // echo $uname;
-        // echo "<br>";
-
         
         echo <<<_END
         <div class="main-thread">
@@ -91,21 +81,6 @@ else {
 
         }
     }
-        // while ($row = mysqli_fetch_assoc($result_set)) {
-        //     echo $row['id'];
-        // }
-
-        // while ($row = mysqli_fetch_assoc($result_set)) {
-        //     // echo "Thread ID: " . $row['id'] . "<br>";
-        //     // echo "Thread Title: " . $row['thread_name'] . "<br>";
-        //     $thread_name = $row['thread_name'];
-        //     $op_name = $row['uname'];
-        //     $post_time = $row['post_time'];
-        //     $thread_id = $row['id'];
-        //     // echo "<hr>";
-        // // }
-
-
         
     }
 }

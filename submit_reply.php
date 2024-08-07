@@ -23,9 +23,6 @@ else {
         $content=$_POST['content-container'];
         $thread_number = $_SESSION['thread_id'];
         $login_id = $_SESSION['login_id'];
-        // echo $content;
-        // echo $thread_number;
-        // echo $login_id;
 
         //create a new mysqli connection
         $conn=new mysqli($host,$user,$pass,$db);
