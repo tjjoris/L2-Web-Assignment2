@@ -41,7 +41,42 @@ else {
     // function show_thread($thread_id){
         //query for posts in thead
         // $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
+        // $qry_all_threads="SELECT threads.id AS id, thread_name, posts.post_time AS post_time, logins.uname AS uname, threads.last_post_time AS last_post_time FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id WHERE threads.last_post_time  IN (SELECT MAX(threads.last_post_time) FROM threads) ORDER BY threads.last_post_time DESC";
         $qry_all_threads="SELECT threads.id AS id, thread_name, posts.post_time AS post_time, logins.uname AS uname, threads.last_post_time AS last_post_time FROM threads LEFT JOIN posts ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id ORDER BY threads.last_post_time DESC";
+        // $qry_all_threads="SELECT threads.id AS id, thread_name, threads.last_post_time AS last_post_time FROM threads WHERE threads.id IN (SELECT login_id FROM posts WHERE post_time = (SELECT MAX(posts.post_time) FROM posts)  ORDER BY threads.last_post_time DESC";
+        // $qry_all_threads="SELECT threads.id AS id, thread_name, threads.last_post_time AS post_time FROM posts WHERE posts.thread_id IN (SELECT threads.id FROM threads )";
+        // $qry_all_threads="SELECT threads.id AS id, threads.thread_name, threads.last_post_time AS last_post_time, logins.uname AS uname FROM threads LEFT JOIN (SELECT thread_id, MAX(post_time) AS post_time, login_id FROM posts GROUP BY thread_id) ON posts.thread_id = threads.id LEFT JOIN logins ON logins.id = posts.login_id ORDER BY threads.last_post_time DESC";
+
+        $qry_all_threads = "
+SELECT 
+    threads.id AS id, 
+    threads.thread_name AS thread_name, 
+    threads.last_post_time AS last_post_time, 
+    logins.uname AS uname 
+FROM 
+    threads 
+LEFT JOIN 
+    (SELECT 
+        thread_id, 
+        MAX(post_time) AS post_time 
+     FROM 
+        posts 
+     GROUP BY 
+        thread_id) max_posts 
+ON 
+    threads.id = max_posts.thread_id 
+LEFT JOIN 
+    posts 
+ON 
+    posts.thread_id = max_posts.thread_id 
+    AND posts.post_time = max_posts.post_time 
+LEFT JOIN 
+    logins 
+ON 
+    logins.id = posts.login_id 
+ORDER BY 
+    threads.last_post_time DESC;
+";
 
         //run query to get posts
         $result_set = mysqli_query($conn, $qry_all_threads);
@@ -63,7 +98,7 @@ else {
             // echo "Thread Title: " . $row['thread_name'] . "<br>";
             $thread_name = $row['thread_name'];
             $op_name = $row['uname'];
-            $post_time = $row['post_time'];
+            $post_time = $row['last_post_time'];
             $thread_id = $row['id'];
             // echo "<hr>";
         // }
