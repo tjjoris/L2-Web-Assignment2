@@ -1,6 +1,9 @@
 <?php
 echo "test";
 require_once "start_session.php";
+//set thread page number to 0
+$_SESSION['main_threads_page_number'] = 0;
+
 //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 
