@@ -10,8 +10,7 @@
     </div>
     <nav>
     </nav>
-    <a class="navBtn" href="#"><button class="navBtn">Sign In</button></a>
-    <a class="navBtn" href="#"><button class="navBtn">Sign Up</button></a>
+    <a class="navBtn" href="logout.php"><button class="navBtn">Log out</button></a>
 </header>
 <div class="container">
     <div class="left-bar">
