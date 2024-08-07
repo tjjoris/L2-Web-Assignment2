@@ -7,66 +7,95 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+
+
+           
     
 <?php
+require_once "sidebar.php";
+
+echo " <div class='main'>";
     //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
+require_once "start_session.php";
+
+$_SESSION['last_page'] = "threads_main";
 
 //create a new mysqli connection
 $conn = new mysqli($host,$user,$pass,$db,$port);
 
 //if sqli connection error print error message.
 if ($conn->connect_error){
+    echo "error here";
     echo "failed to connect to db".$conn->connect_error;
 }
 //else, you are connected.
+//query to show 1 of each thread ordered by most recent.
 else {
-    // require_once "start_session.php";
-    // $thread_id = $_SESSION['thread_id'];
-    // echo $thread_id;
+        $qry_all_threads = "
+SELECT 
+    threads.id AS id, 
+    threads.thread_name AS thread_name, 
+    threads.last_post_time AS last_post_time, 
+    logins.uname AS uname 
+FROM 
+    threads 
+LEFT JOIN 
+    (SELECT 
+        thread_id, 
+        MAX(post_time) AS post_time 
+     FROM 
+        posts 
+     GROUP BY 
+        thread_id) max_posts 
+ON 
+    threads.id = max_posts.thread_id 
+LEFT JOIN 
+    posts 
+ON 
+    posts.thread_id = max_posts.thread_id 
+    AND posts.post_time = max_posts.post_time 
+LEFT JOIN 
+    logins 
+ON 
+    logins.id = posts.login_id 
+ORDER BY 
+    threads.last_post_time DESC;
+";
 
-    // if (!$_SESSION['logged_in']) {
-    //     header("Location:index.php");
+        //run query to get posts
+        $result_set = mysqli_query($conn, $qry_all_threads);
+
+        // Fetch and display the data
+        while ($row = mysqli_fetch_assoc($result_set)) {
+            $thread_name = $row['thread_name'];
+            $op_name = $row['uname'];
+            $post_time = $row['last_post_time'];
+            $thread_id = $row['id'];
+        // }
+    
+
+            echo <<<_END
+                        <div class="main-thread">
+                            <a href="thread_redirect.php?thread_id=$thread_id">
+                            <div class="user-profile">
+                                <img src="images/userIcon.png">
+                                <div>
+                                    <p>$op_name / author</p>
+                                    <span class="when-posted">$post_time</span>
+                                </div>
+                            </div>
+                            <div class="main-thread-title">
+                                    $thread_name
+                            </div>
+                            </a>
+                            </div>  
+                    _END;
+        }
     // }
-
-    function show_thread($thread_id){
-    echo "test";
-    echo "$thread_id";
-    //query for posts in thead
-    $qry_select_thread="SELECT * FROM posts WHERE 'thread_id' = '$thread_id'";
-
-    //run query to get posts
-    $result_set = mysqli_query($conn, $qry_select_thread);
-
-    //get the result from the query.
-    $result = mysqli_fetch_assoc($result_set);
-
-    foreach ($result as $item){
-        echo $item;
-    }
-}
-
-    echo <<<_END
-                <div class="main-thread">
-                    <a href="thread.html">
-                    <div class="user-profile">
-                        <img src="images/userIcon.png">
-                        <div>
-                            <p>User name / author</p>
-                            <span class="when-posted">July 24 2023 2:31 PM</span>
-                        </div>
-                    </div>
-                    <div class="main-thread-title">
-                            All kittens are cute because
-                    </div>
-                    </a>
-                    </div>  
-            _END;
 }
 
 ?>
-
-<form action="new_thread.php" method="POST" enctype="text/plain">
-    <button type="submit" >new Thread</button>
+</div>
 </body>
 </html>

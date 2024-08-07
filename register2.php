@@ -67,6 +67,7 @@ else {
             //query to insert into logins.
             $conn->query($insert_query);
             echo "<br> successfully registered";
+            header ("Location: index.php");
         }
     }
 }
