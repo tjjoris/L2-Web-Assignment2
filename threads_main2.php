@@ -19,7 +19,6 @@ echo " <div class='main'>";
 require_once "login_file.php";
 require_once "start_session.php";
 
-$_SESSION['last_page'] = "threads_main";
 
 //create a new mysqli connection
 // $conn = new mysqli($host,$user,$pass,$db,$port);

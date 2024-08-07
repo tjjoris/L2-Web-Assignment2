@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <title>Document</title>
+    <title>Post</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -91,7 +91,8 @@ else {
                             <div class="main-thread-title">
                                 $message
                             </div>
-                        </div>
+                        </div>                        
+                        <hr>
                         
                     _END;
                 }
@@ -112,10 +113,11 @@ else {
                                 <span class="author-text">Me283838</span>                        
                             </div>
                             <label for="content-container" class="message-label">Message:</label>
+                            <br>
                             <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text"></textarea>
                         </div>
                         <div class="post-button-container">
-                            <button type="submit" >Reply</button>
+                            <button class="T-Btn" type="submit" >Reply</button>
                         </div>
                     </div>
                 </form>

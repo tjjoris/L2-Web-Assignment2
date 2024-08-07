@@ -20,7 +20,7 @@
                 <a class="left-bar-Btn" href="new_thread.html"><button class="left-bar-Btn">New Thread</button></a>
                 </form>
             </div>
-            <a href="threads_main2.php">Home</a>
+            <a href="threads_main3.php">Home</a>
             <a href="#MostPopular">Most popular</a>
         </div>
         <div class="left-topic">
