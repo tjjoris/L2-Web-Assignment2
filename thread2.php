@@ -112,8 +112,7 @@ else {
                                 <span class="author-text">Me283838</span>                        
                             </div>
                             <label for="content-container" class="message-label">Message:</label>
-                            <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text">
-                            </textarea>
+                            <textarea type="text" name="content-container" id="content-container" placeholder="enter post here" class="message-text"></textarea>
                         </div>
                         <div class="post-button-container">
                             <button type="submit" >Reply</button>
