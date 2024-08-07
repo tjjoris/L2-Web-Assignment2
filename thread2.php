@@ -32,13 +32,12 @@ else {
     if (($thread_number != null) && (isset($thread_number))) {
         //query to get this thread title.
         $qry_this_thread="SELECT threads.thread_name AS thread_name, posts.post_time AS post_time, logins.uname AS uname, posts.message AS message FROM threads JOIN posts ON posts.thread_id = threads.id JOIN logins ON logins.id = posts.login_id WHERE posts.thread_id = $thread_number";
-
+        
         //run query to get posts
         $result_set = mysqli_query($conn, $qry_this_thread);
 
         while ($row = mysqli_fetch_assoc($result_set)) {
             $thread_name = $row['thread_name'];
-            $thread_name = $thread_name == NULL ? $thread_name : "";
             $op_name = $row['uname'];
             $post_time = $row['post_time'];
             $message = $row['message'];
@@ -55,6 +54,7 @@ require_once "sidebar.php";
 
 ?>
             <?php
+            echo $thread_name;
             echo <<<_END
             <div class="post-title"><h1>$thread_name</h1>
             
