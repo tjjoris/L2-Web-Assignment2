@@ -4,7 +4,7 @@ require_once "start_session.php";
 //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 
-$conn=new mysqli($host,$user,$pass,$db);
+// $conn=new mysqli($host,$user,$pass,$db);
 //if connection error send error message.
 if ($conn->connect_error){
     echo "failed to connect to db".$conn->connect_error;
@@ -27,7 +27,7 @@ else {
             $search_input = $_POST['search_input'];
         }
         //create a new mysqli connection
-        $conn=new mysqli($host,$user,$pass,$db);
+        // $conn=new mysqli($host,$user,$pass,$db);
                     
         //if sqli connection error print error message.
         if ($conn->connect_error){
