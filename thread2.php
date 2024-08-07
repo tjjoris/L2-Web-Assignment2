@@ -80,8 +80,7 @@ else {
                     $message = $row['message'];
                     // php to display each post in thread
                     echo <<<_END
-                        <div class="main-thread">
-                            <a href="#mainpost1">
+                        <div class="post-container">
                             <div class="user-profile">
                                 <img src="images/userIcon.png">
                                 <div>
@@ -92,7 +91,6 @@ else {
                             <div class="main-thread-title">
                                 $message
                             </div>
-                            </a>
                         </div>
                         
                     _END;
