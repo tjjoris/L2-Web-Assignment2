@@ -21,13 +21,13 @@
                 </form>
             </div>
             <a href="threads_main3.php">Home</a>
-            <a href="#MostPopular">Most popular</a>
+            <!-- <a href="#MostPopular">Most popular</a> -->
         </div>
-        <div class="left-topic">
+        <!-- <div class="left-topic">
             <p>Topics</p>
             <a href="#topic1"><u>All kittens are cute because</u></a>
             <a href="#topic2"><u>I wish kittens were fuzzier.</u></a>
             <a href="#topic3"><u>Need advice on how to dye my kitten</u></a>
             <a href="#topic4"><u>Why cats make the best pets</u></a>
-        </div>
+        </div> -->
     </div>
