@@ -40,7 +40,7 @@ else {
             // echo $row['id'];
 
         //create a new mysqli connection
-        $conn = new mysqli($host,$user,$pass,$db,$port);
+        // $conn = new mysqli($host,$user,$pass,$db,$port);
 
 //if sqli connection error print error message.
 if ($conn->connect_error){

@@ -10,7 +10,7 @@
 require_once "login_file.php";
 
 //create a new mysqli connection
-$conn=new mysqli($host,$user,$pass,$db);
+// $conn=new mysqli($host,$user,$pass,$db);
 //if sqli connection error print error message.
 if ($conn->connect_error){
     echo "failed to connect to db".$conn->connect_error;

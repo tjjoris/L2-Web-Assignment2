@@ -8,6 +8,9 @@
  $db="web_assign2";
  $port="3306";
  $attr = "mysql:host=$host;dbname=$db;";
+ 
+// create a mysqli connection
+$conn=new mysqli($host,$user,$pass,$db, $port);
 
 //  $opts = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 //  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
