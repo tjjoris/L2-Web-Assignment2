@@ -8,6 +8,9 @@ if ((!isset($_SESSION['main_threads_page_number'])) && (empty($_SESSION['main_th
 } 
 else {
     $_SESSION['main_threads_page_number'] = $_SESSION['main_threads_page_number'] - 10;
+    if ($_SESSION['main_threads_page_number'] < 0) {
+        $_SESSION['main_threads_page_number'] = 0;
+    }
 }
 header ("Location: show_multiple_threads.php");
 ?>

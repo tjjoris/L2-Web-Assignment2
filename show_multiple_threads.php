@@ -34,8 +34,7 @@ else {
         $main_threads_page_number = $_SESSION['main_threads_page_number'];
     }
 
-    
-    echo $main_threads_page_number;
+
 
 
     if ((!isset($_SESSION['show_threads'])) && (empty($_SESSION['show_threads'])))
@@ -51,20 +50,8 @@ else {
         foreach ($result_set as $row) {
             // echo $main_threads_page_number;
             $current_thread_id = $row['id'];
-            echo $count;
-            echo "test";
             if (($count >= $main_threads_page_number) && ($count < $main_threads_page_number + 10)) {
-                // }
-                // for ($i = 2; $i < min(21, count($row)); $i++) {
-                //     // $rows[$i]['id']
-                //     echo $row[$i]['id'];
-                    // $current_thread_id = $row[$i]['id'];
                 
-                    // echo $row['id'];
-
-                //create a new mysqli connection
-                // $conn = new mysqli($host,$user,$pass,$db,$port);
-
                 //if sqli connection error print error message.
                 if ($conn->connect_error){
                     echo "error here";
