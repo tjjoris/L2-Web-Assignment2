@@ -54,7 +54,6 @@ require_once "sidebar.php";
 
 ?>
             <?php
-            echo $thread_name;
             echo <<<_END
             <div class="post-title"><h1>$thread_name</h1>
             
