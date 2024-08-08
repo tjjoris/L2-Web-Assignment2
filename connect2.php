@@ -36,6 +36,8 @@ else {
         //the result set from the query.
         $result_set = mysqli_query($conn, $query);
         if ($result_set->num_rows<=0) {
+            
+            Header("Location: index.php");
             die ("username not found");
         }
         else {
