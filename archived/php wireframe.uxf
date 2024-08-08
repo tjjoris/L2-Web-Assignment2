@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>110</y>
-      <w>130</w>
-      <h>60</h>
+      <x>162</x>
+      <y>66</y>
+      <w>78</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>register_page.php</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>300</y>
-      <w>130</w>
-      <h>70</h>
+      <x>162</x>
+      <y>180</y>
+      <w>78</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>index.php
 (Login)</panel_attributes>
@@ -27,21 +27,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>130</y>
-      <w>170</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>Search</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>630</x>
-      <y>290</y>
-      <w>150</w>
-      <h>70</h>
+      <x>378</x>
+      <y>174</y>
+      <w>90</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Threads_main3.php</panel_attributes>
     <additional_attributes/>
@@ -49,10 +38,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>470</y>
-      <w>190</w>
-      <h>90</h>
+      <x>156</x>
+      <y>282</y>
+      <w>114</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>sidebar.php
 (used in all pages)</panel_attributes>
@@ -61,10 +50,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>600</y>
-      <w>180</w>
-      <h>80</h>
+      <x>162</x>
+      <y>360</y>
+      <w>108</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>login_file.php
 (used in all pages that 
@@ -74,10 +63,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>160</y>
-      <w>30</w>
-      <h>160</h>
+      <x>192</x>
+      <y>96</y>
+      <w>18</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
@@ -85,10 +74,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
+      <x>240</x>
       <y>0</y>
-      <w>100</w>
-      <h>30</h>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>register2.php</panel_attributes>
     <additional_attributes/>
@@ -96,10 +85,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>20</y>
-      <w>130</w>
-      <h>110</h>
+      <x>204</x>
+      <y>12</y>
+      <w>78</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>110.0;10.0;10.0;90.0</additional_attributes>
@@ -107,10 +96,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>20</y>
-      <w>110</w>
-      <h>330</h>
+      <x>234</x>
+      <y>12</y>
+      <w>66</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;310.0;90.0;10.0</additional_attributes>
@@ -118,10 +107,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>370</y>
-      <w>100</w>
-      <h>30</h>
+      <x>282</x>
+      <y>222</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>connect2.php</panel_attributes>
     <additional_attributes/>
@@ -129,10 +118,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>340</y>
-      <w>100</w>
-      <h>70</h>
+      <x>234</x>
+      <y>204</y>
+      <w>60</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>80.0;50.0;10.0;10.0</additional_attributes>
@@ -140,10 +129,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>330</y>
-      <w>90</w>
-      <h>70</h>
+      <x>336</x>
+      <y>198</y>
+      <w>54</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;50.0</additional_attributes>
@@ -151,10 +140,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>470</y>
-      <w>220</w>
-      <h>30</h>
+      <x>420</x>
+      <y>282</y>
+      <w>132</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>show_multiple_threads.php</panel_attributes>
     <additional_attributes/>
@@ -162,10 +151,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>350</y>
-      <w>90</w>
-      <h>140</h>
+      <x>438</x>
+      <y>210</y>
+      <w>54</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;120.0;10.0;10.0</additional_attributes>
@@ -173,10 +162,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>570</y>
-      <w>100</w>
-      <h>30</h>
+      <x>372</x>
+      <y>342</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>search.php</panel_attributes>
     <additional_attributes/>
@@ -184,10 +173,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>500</y>
-      <w>200</w>
-      <h>110</h>
+      <x>264</x>
+      <y>300</y>
+      <w>120</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>180.0;90.0;10.0;10.0</additional_attributes>
@@ -195,10 +184,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
-      <y>490</y>
-      <w>130</w>
-      <h>100</h>
+      <x>414</x>
+      <y>294</y>
+      <w>78</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>110.0;10.0;10.0;80.0</additional_attributes>
@@ -206,10 +195,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1050</x>
-      <y>390</y>
-      <w>100</w>
-      <h>30</h>
+      <x>630</x>
+      <y>234</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>thread2.php</panel_attributes>
     <additional_attributes/>
@@ -217,10 +206,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>390</y>
-      <w>160</w>
-      <h>110</h>
+      <x>546</x>
+      <y>234</y>
+      <w>96</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>140.0;10.0;10.0;90.0</additional_attributes>
@@ -228,10 +217,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
-      <y>680</y>
-      <w>200</w>
-      <h>30</h>
+      <x>414</x>
+      <y>408</y>
+      <w>120</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>show_next_10_threads.php</panel_attributes>
     <additional_attributes/>
@@ -239,10 +228,10 @@ connect to server)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>620</y>
-      <w>210</w>
-      <h>30</h>
+      <x>546</x>
+      <y>372</y>
+      <w>126</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>show_previous_10_threads.php</panel_attributes>
     <additional_attributes/>
@@ -250,10 +239,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>490</y>
-      <w>110</w>
-      <h>210</h>
+      <x>456</x>
+      <y>294</y>
+      <w>66</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;190.0;90.0;10.0</additional_attributes>
@@ -261,10 +250,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>490</y>
-      <w>130</w>
-      <h>150</h>
+      <x>540</x>
+      <y>294</y>
+      <w>78</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>110.0;130.0;10.0;10.0</additional_attributes>
@@ -272,10 +261,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>490</y>
-      <w>90</w>
-      <h>150</h>
+      <x>522</x>
+      <y>294</y>
+      <w>54</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;130.0</additional_attributes>
@@ -283,10 +272,10 @@ connect to server)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>490</y>
-      <w>90</w>
-      <h>210</h>
+      <x>480</x>
+      <y>294</y>
+      <w>54</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;190.0</additional_attributes>
@@ -295,9 +284,9 @@ connect to server)</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>300</y>
-      <w>210</w>
-      <h>100</h>
+      <y>180</y>
+      <w>126</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>start_session.php
 (used in all pages 
@@ -307,10 +296,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>330</y>
-      <w>90</w>
-      <h>30</h>
+      <x>120</x>
+      <y>198</y>
+      <w>54</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
@@ -318,10 +307,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
-      <y>770</y>
-      <w>190</w>
-      <h>30</h>
+      <x>258</x>
+      <y>462</y>
+      <w>114</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>new_thread2.php</panel_attributes>
     <additional_attributes/>
@@ -329,10 +318,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>520</y>
-      <w>100</w>
-      <h>270</h>
+      <x>264</x>
+      <y>312</y>
+      <w>60</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>80.0;250.0;10.0;10.0</additional_attributes>
@@ -340,10 +329,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1060</x>
-      <y>490</y>
-      <w>180</w>
-      <h>30</h>
+      <x>636</x>
+      <y>294</y>
+      <w>108</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>submit_reply.php</panel_attributes>
     <additional_attributes/>
@@ -351,10 +340,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1110</x>
-      <y>410</y>
-      <w>50</w>
-      <h>100</h>
+      <x>666</x>
+      <y>246</y>
+      <w>30</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>30.0;80.0;10.0;10.0</additional_attributes>
@@ -362,10 +351,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>840</y>
-      <w>180</w>
-      <h>30</h>
+      <x>420</x>
+      <y>504</y>
+      <w>108</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>submit-new-thread.php
 </panel_attributes>
@@ -374,10 +363,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>770</y>
-      <w>110</w>
-      <h>100</h>
+      <x>366</x>
+      <y>462</y>
+      <w>66</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>90.0;80.0;10.0;10.0</additional_attributes>
@@ -385,10 +374,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>400</y>
-      <w>430</w>
-      <h>490</h>
+      <x>522</x>
+      <y>240</y>
+      <w>258</w>
+      <h>294</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>280.0;10.0;410.0;70.0;250.0;470.0;10.0;450.0</additional_attributes>
@@ -396,10 +385,10 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>850</x>
-      <y>280</y>
-      <w>190</w>
-      <h>30</h>
+      <x>558</x>
+      <y>192</y>
+      <w>114</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>thread_redirect.php</panel_attributes>
     <additional_attributes/>
@@ -407,23 +396,67 @@ to check login $_SESSION)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
-      <y>300</y>
-      <w>100</w>
-      <h>190</h>
+      <x>516</x>
+      <y>204</y>
+      <w>108</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>290</y>
-      <w>110</w>
-      <h>120</h>
+      <x>666</x>
+      <y>198</y>
+      <w>18</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>90.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>642</x>
+      <y>246</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>348</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>logout.php</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>300</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>216</y>
+      <w>132</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;220.0</additional_attributes>
   </element>
 </diagram>
