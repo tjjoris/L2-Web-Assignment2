@@ -18,7 +18,6 @@ if ($conn->connect_error){
 //connected to db successfully. now to begin the registration process.
 else {
     //message saying connected to db.
-    echo "connected";
     //in order to prevent hackers from using malicious scripts the 
     //variables need to be sanitized.
     //store unsanitized variables sent via form post.
@@ -52,12 +51,11 @@ else {
         }
         //email row is greater than 0, email is taken.
         if ($result_email->num_rows>0){
-            echo "<br>emamil is taken";
+            echo "<br>email is taken";
         }
         //hash sanitized password so it cannot be read if database is compramised.
         $hash = password_hash($pword, PASSWORD_DEFAULT);
         //hash is printed for no particluar reason.
-        echo "<br>this is the hashed password<br>$hash<br>";
         
         //if user name is not taken, and email is not taken.
         if (($result_name->num_rows<=0) && ($result_email->num_rows<=0)){

@@ -108,9 +108,7 @@ else {
                     <div class="post">
                         
                         <div class="post-container">
-                            <div class="author-container">
-                                <span class="author-label">Author</span>
-                                <span class="author-text">Me283838</span>                        
+                            <div class="author-container">                     
                             </div>
                             <label for="content-container" class="message-label">Message:</label>
                             <br>

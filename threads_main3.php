@@ -44,7 +44,7 @@ else {
             $sanatized_search_input =  $conn->real_escape_string($search_input);
 
             //add to thread query
-            $qry_search="SELECT threads.id AS id FROM threads ORDER BY threads.last_post_time ASC";
+            $qry_search="SELECT threads.id AS id FROM threads ORDER BY threads.last_post_time DESC";
             //get result set
             $result_set = mysqli_query($conn, $qry_search);
             
