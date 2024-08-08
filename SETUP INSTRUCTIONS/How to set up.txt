@@ -1,0 +1,7 @@
+These are the setup instructions for fuzzy kittens forums:
+
+1. this grandparent directory "Assign2FuzzyKittens" into your XAMPP htdocs folder.
+2. create the neccsary database by copying and running the SQL code contained in "create.sql" in this direcory into an sql query in your database.
+3. If you are running your local mysql on a port other than 3306 change the variable $port in the file "login_file.php" to the appropriate port number.
+4. navigate to the localhost folder containing these files in a wab browser. "localhost/Assig2FuzzyKittens"
+5. Try all funcionality: Register, login, home, create threads, navigate threads, post responses in threads, search threads.
