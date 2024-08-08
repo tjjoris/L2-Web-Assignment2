@@ -15,7 +15,7 @@ html{
     font-family: Poppins, Segeo UI, sans-serif;
     font-size: 12pt;
     color: var(--text-color);
-    text-align: center;
+    text-align: center;s
 }
 
 body{
@@ -25,12 +25,12 @@ body{
 }
 /*Background image from: https://www.pexels.com/photo/cat-sitting-beside-a-computer-10416213/*/
 .html-background{
-    background-image: url(catlogin3.jpg);
+    background-image: url(images/catlogin3.jpg);
     background-position: right;
 }
 /*Background  image from: https://pixabay.com/illustrations/cats-nature-cute-animal-soft-8743206/*/
 .php-background{
-    background-image: url(catsignup2.jpg);
+    background-image: url(images/catsignup2.jpg);
     background-position: right;
 }
 .wrapper{
