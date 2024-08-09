@@ -1,0 +1,3 @@
+Luke Johnson - php
+Ikhide Mohammed - CSS and JavaScript for login and register pages.
+Edward Kwong - CSS for all threads and posts.

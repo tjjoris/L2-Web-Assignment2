@@ -11,7 +11,6 @@
 <body>
 
 <?php
-require_once "new_thread_script.php";
 require_once "start_session.php";
 if (isset($_SESSION['thread_id'])) {
     $thread_id = $_SESSION['thread_id'];

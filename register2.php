@@ -1,16 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="kittensite.css">
+</head>
+<body>
+    
+<div class="wrapper" id="register-container">
+
 <?php
 
-//these are the login variables, instead of using them here, we get them from login_file.php.
-// $host="localhost";
-// $user="root";
-// $pass="";
-// $db="web_assign2";
 
 //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
 
-// create a mysqli connection
-// $conn=new mysqli($host,$user,$pass,$db);
 //if connection error send error message.
 if ($conn->connect_error){
     echo "failed to connect to db".$conn->connect_error;
@@ -18,7 +23,6 @@ if ($conn->connect_error){
 //connected to db successfully. now to begin the registration process.
 else {
     //message saying connected to db.
-    echo "connected";
     //in order to prevent hackers from using malicious scripts the 
     //variables need to be sanitized.
     //store unsanitized variables sent via form post.
@@ -47,17 +51,23 @@ else {
         //run email exists query.
         $result_email=$conn->query($matching_email);
         //user name rows is greater than 0, user name is taken.
+        $show_signup = FALSE;
         if($result_name->num_rows>0){
-            echo "<br>name is taken";
+            echo "<br>Name is taken.";
+            $show_signup = TRUE;            
         }
         //email row is greater than 0, email is taken.
         if ($result_email->num_rows>0){
-            echo "<br>emamil is taken";
+            echo "<br>Email is taken.";
+            $show_signup = TRUE;
+        }
+        //show signup link because name or password is taken
+        if ($show_signup) {
+            echo "<p>Need an Account? <a href='register_page.php'>Signup</a></p>";
         }
         //hash sanitized password so it cannot be read if database is compramised.
         $hash = password_hash($pword, PASSWORD_DEFAULT);
         //hash is printed for no particluar reason.
-        echo "<br>this is the hashed password<br>$hash<br>";
         
         //if user name is not taken, and email is not taken.
         if (($result_name->num_rows<=0) && ($result_email->num_rows<=0)){
@@ -72,3 +82,7 @@ else {
     }
 }
 ?>
+</div>
+
+</body>
+</html>
