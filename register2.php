@@ -11,7 +11,7 @@
 <div class="wrapper" id="register-container">
 
 <?php
-
+ob_start();
 
 //get login variables, these are requred for script to run, and will only be called once.
 require_once "login_file.php";
@@ -42,6 +42,18 @@ else {
 
     //post exists continue.
     if (isset($_POST)) {
+        
+        //if user name is not taken, and email is not taken.
+        if (($result_name->num_rows<=0) && ($result_email->num_rows<=0)){
+            //query to insert into logins, sanitized user name, sanitized email and hashed password.
+            $insert_query="INSERT INTO logins (uname, email, password) 
+            VALUES ('$uname', '$email', '$hash')";
+            //query to insert into logins.
+            $conn->query($insert_query);
+            header ("Location: index.php");
+            exit();
+        }
+        
         //query to check if a user name exists in logins database.
         $matching_name="SELECT * FROM logins WHERE uname='$uname'";
         //query to check if an email exists in logins database.
@@ -69,16 +81,6 @@ else {
         $hash = password_hash($pword, PASSWORD_DEFAULT);
         //hash is printed for no particluar reason.
         
-        //if user name is not taken, and email is not taken.
-        if (($result_name->num_rows<=0) && ($result_email->num_rows<=0)){
-            //query to insert into logins, sanitized user name, sanitized email and hashed password.
-            $insert_query="INSERT INTO logins (uname, email, password) 
-            VALUES ('$uname', '$email', '$hash')";
-            //query to insert into logins.
-            $conn->query($insert_query);
-            echo "<br> successfully registered";
-            header ("Location: index.php");
-        }
     }
 }
 ?>

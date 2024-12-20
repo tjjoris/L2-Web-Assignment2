@@ -1,5 +1,5 @@
 <?php
-echo "test";
+ob_start();
 require_once "start_session.php";
 //set thread page number to 0
 $_SESSION['main_threads_page_number'] = 0;
@@ -10,23 +10,20 @@ require_once "login_file.php";
 // $conn=new mysqli($host,$user,$pass,$db);
 //if connection error send error message.
 if ($conn->connect_error){
-    echo "failed to connect to db".$conn->connect_error;
+    // echo "failed to connect to db".$conn->connect_error;
 }
 //connected to db successfully. now to begin the registration process.
 else {
 
     //post does not exist
     if ((!isset($_POST)) ){
-        echo "nothing";
     }
     //post exists
     else {
         //set the search input to an empty string in case the post value is empty.
         $search_input = " ";
-        echo "should begin to run search";
         if ((isset($_POST['search_input'])) && (!empty($_POST['search_input'])))
         {
-            echo "set search value to POST search value";
             $search_input = $_POST['search_input'];
         }
         //create a new mysqli connection
@@ -34,12 +31,11 @@ else {
                     
         //if sqli connection error print error message.
         if ($conn->connect_error){
-            echo "failed to connect to db".$conn->connect_error;
+            // echo "failed to connect to db".$conn->connect_error;
         }
         //else, you are connected.
         else {
-            echo "running search";
-
+            //run search
             //sanatize search input
             $sanatized_search_input =  $conn->real_escape_string($search_input);
 
@@ -55,6 +51,7 @@ else {
 
                 $_SESSION['show_threads'] = $results_array;
                 header("Location: show_multiple_threads.php");
+                exit();
             }
         }
     }

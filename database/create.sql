@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS web_assign2;
-GRANT USAGE ON *.* TO 'assign2admin'@'localhost' IDENTIFIED BY 'password';
+GRANT USAGE ON *.* TO 'assign2admin'@'localhost' IDENTIFIED BY 'ThisIsNotTheRealPassword';
 GRANT ALL PRIVILEGES ON web_assign2.* to 'assign2admin'@'localhost';
 FLUSH PRIVILEGES;
 USE web_assign2;

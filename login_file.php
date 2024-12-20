@@ -2,15 +2,15 @@
  $chrs = "utf8mb4";
 //  $usr = 'assign2admin';
 //  $pass = 'password';
- $host="localhost";
- $user="root";
- $pass="";
+ $host="mysql.luke-j.com";
+ $user="fkuser";
+ $pass="GreyBlueLongAndFurry";
  $db="web_assign2";
  $port="3306";
  $attr = "mysql:host=$host;dbname=$db;";
  
 // create a mysqli connection
-$conn=new mysqli($host,$user,$pass,$db, $port);
+$conn=new mysqli($host,$user,$pass,$db);
 
 //  $opts = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 //  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

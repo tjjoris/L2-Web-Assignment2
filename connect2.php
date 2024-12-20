@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 //these are the login variables, instead of using them here, we get them from login_file.php.
 // $host="localhost";
@@ -13,16 +14,12 @@ require_once "login_file.php";
 // $conn=new mysqli($host,$user,$pass,$db);
 //if sqli connection error print error message.
 if ($conn->connect_error){
-    echo "failed to connect to db".$conn->connect_error;
 }
 //else, you are connected.
 else {
-    //print connected.
-    echo "connected";
+    //connected
     //check if POST exists, post is needed to get inputed variables in form.
     if (isset($_POST)) {
-        //print post detected.
-        echo "<br>post detected<br>";
         //uname = user name from POST.
         $uname = $_POST['uname'];
         //password = password from POST.
@@ -47,16 +44,15 @@ else {
             $pw = $result['password'];
             //use password_verify() to verify if the passed password matches the hashed password in the DB.
             if (password_verify(str_replace("'", "", $pw_temp), $pw)) {
-                //print valid login
-                echo "<br>valid logon";
+                //valid login
                 session_start();
                 $_SESSION['logged_in'] = TRUE;
                 $_SESSION['login_id'] = $result['id'];
                 header ("Location: threads_main3.php");
+                exit();
             }
             //couldn't login, print invalid user name/password combo.
             else {
-                echo "error, couldn't login";
                 die ("Invalid username/password combination");
             }  
         }      
